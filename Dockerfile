@@ -32,7 +32,7 @@ RUN set -x \
     && ln -s /usr/include/locale.h /usr/include/xlocale.h \
     ### fix pyzmq to v16.0.2 as that is what is distributed with py3-zmq
     ### pin down the tornado and ipykernel to compatible versions
-    && pip3 install jupyter notebook pyzmq==16.0.2 tornado==4.5.3 ipykernel==4.8.1 \
+    && pip3 install jupyter jupyterhub jupyterlab notebook pyzmq==16.0.2 tornado==4.5.3 ipykernel==4.8.1 \
     ## install gophernotes
     && GOPATH=/go go install github.com/gopherdata/gophernotes \
     && cp /go/bin/gophernotes /usr/local/bin/ \
